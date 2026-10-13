@@ -1,0 +1,7 @@
+export enum StoryStatus {
+  DRAFT = 'DRAFT',
+  GENERATED = 'GENERATED',
+  REVIEWING = 'REVIEWING',
+  APPROVED = 'APPROVED',
+  REJECTED = 'REJECTED'
+}

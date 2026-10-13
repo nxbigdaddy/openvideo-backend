@@ -1,0 +1,29 @@
+import { IsBoolean, IsIn, IsInt, IsOptional, IsString, MaxLength } from 'class-validator';
+
+export class CreateWorkspaceProviderConfigDto {
+  @IsInt()
+  workspaceId: number;
+
+  @IsIn(['text', 'image'])
+  providerType: 'text' | 'image';
+
+  @IsString()
+  @MaxLength(50)
+  providerName: string;
+
+  @IsString()
+  @MaxLength(255)
+  apiBaseUrl: string;
+
+  @IsString()
+  @MaxLength(5000)
+  apiKey: YOUR_SECRET;
+
+  @IsString()
+  @MaxLength(100)
+  modelName: string;
+
+  @IsOptional()
+  @IsBoolean()
+  isDefault?: boolean = false;
+}
